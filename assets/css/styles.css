@@ -139,6 +139,12 @@ code {
   display: inline-block;
 }
 
+
+.get-started-btn {
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+}
+
 .btn, a.btn {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -345,7 +351,8 @@ select {
 
 .branding {
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .branding .logo {
@@ -510,6 +517,7 @@ select {
     position: static;
     margin-top: 15px;
   }
+
 }
 
 /* ======= Doc Styling ======= */
@@ -1303,7 +1311,7 @@ select {
 .landing-page .header {
   background: black;
   color: rgba(255, 255, 255, 0.85);
-  padding: 60px 0;
+  padding: 0 0 60px 0;;
 }
 
 .landing-page .header a {
@@ -1351,11 +1359,16 @@ select {
 @media only screen and (max-width: 600px) {
   .landing-page .tagline {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 1rem;
   }
 
   .landing-page .tagline p {
     margin-bottom: 3px;
+    margin-top: 10px;
+  }
+
+  .top-search-box {
+    margin: 1rem auto;
   }
 }
 
@@ -1560,6 +1573,7 @@ select {
   .container-wide {
     max-width: 735px;
   }
+  
 }
 
 @media (min-width: 992px) {
@@ -1587,6 +1601,11 @@ select {
   .cards-section .item-inner {
     padding: 30px 15px;
   }
+
+  .branding img{
+    height: auto;
+    width: 90vw !important;
+  }
 }
 
 @media (min-width: 576px) {
@@ -1598,6 +1617,10 @@ select {
 @media (min-width: 768px) {
   .main-search-box .search-form .search-input {
     width: 560px;
+  }
+
+  .installation-code {
+    margin: 0.5em 15rem !important;
   }
 }
 

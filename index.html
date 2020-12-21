@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
   <!-- Plugins CSS -->
   <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+  <link rel="stylesheet" href="assets/plugins/prism/prism.css">
   <!-- Theme CSS -->
   <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
   <link id="theme-style" rel="stylesheet" href="assets/css/snow.css">
@@ -34,19 +35,30 @@
       <div class="container">
         <div class="branding">
 
-          <img class="img-fluid2" src="assets/images/eduAlgo.png" height="10" /><br /><br />
+          <img class="img-fluid2" src="assets/images/eduAlgo_Branding.png" height="10" /><br /><br />
 
-          <h1 class="logo">
+          <!--<h1 class="logo">
             <span class="text-highlight">edu </span><span class="text-bold">Algo</span>
-          </h1>
+          </h1>-->
+        </div>
+        <div class="top-search-box" style="margin-top: 3rem;">
+          <form class="form-inline search-form justify-content-center" action="" method="get">
+
+            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+
+            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+          </form>
         </div>
         <div class="tagline">
-          <p>A very simple python package made with python scripts to study different algorithms for educational purposes.</p><br />
-          <p>Designed with <i class="fab fa-python"></i> for <i class="fas fa-code"></i> <span class="text-highlight">developers</span>, <i class="fas fa-user-graduate"></i> <span class="text-highlight">students</span> and <i
-              class="fas fa-chalkboard-teacher"></i> <span class="text-highlight">educators</span>.</p>
+          <p>A very simple python package made with python scripts to study different algorithms for educational
+            purposes.</p><br />
+          <p>Designed with <i class="fab fa-python"></i> for <i class="fas fa-code"></i> <span
+              class="text-highlight">developers</span>, <i class="fas fa-user-graduate"></i> <span
+              class="text-highlight">students</span> and <i class="fas fa-chalkboard-teacher"></i> <span
+              class="text-highlight">educators</span>.</p>
         </div><br />
 
-        <div class="main-search-box pt-3 pb-4 d-inline-block">
+        <!--<div class="main-search-box pt-3 pb-4 d-inline-block">
           <form class="form-inline search-form justify-content-center" action="" method="get">
 
             <input type="text" placeholder="Enter search terms..." name="search" class="form-control search-input">
@@ -58,33 +70,37 @@
 
         <div class="social-container">
           <div class="github-btn mb-2">
-            <a class="github-button" href="https://github.com/Abhijit2505/eduAlgo" data-size="large" aria-label="Star xriley/PrettyDocs-Theme on GitHub">Give Us Some ⭐</a>
-            <a class="github-button" href="https://github.com/Abhijit2505" data-size="large" aria-label="Follow @xriley on GitHub">Follow The Developer</a>
+            <a class="github-button" href="https://github.com/Abhijit2505/eduAlgo" data-size="large"
+              aria-label="Star xriley/PrettyDocs-Theme on GitHub">Give Us Some ⭐</a>
+            <a class="github-button" href="https://github.com/Abhijit2505" data-size="large"
+              aria-label="Follow @xriley on GitHub">Follow The Developer</a>
           </div>
-        </div>
+        </div>-->
     </header>
 
     <section class="cards-section text-center">
       <div class="container">
         <h2 class="title">Let's Get Started</h2>
+        <pre
+          class="installation-code"> <code class="language-python">pip install eduAlgo</code><div class="tooltip" id="copy-btn"><a class="copy-btn"><span class="tooltiptext" id="tooltip">Copy to clipboard</span><i class="icon far fa-copy"></i></a></div></pre>
         <div class="intro">
           <p>Welcome to <b>eduAlgo</b>.This page is made for the documentation of the
             python package. Our aim is to include the detailed explanation for the
             modules, methods and technicalities involved within this package scripts. </p>
           <div class="cta-container">
-            <a class="btn btn-primary btn-cta" href="https://pypi.org/project/eduAlgo/#files" target="_blank"><i class="fas fa-cloud-download-alt"></i>Download The Package</a>
+            <a class="btn btn-primary btn-cta get-started-btn" href="start.html"><i class="fas fa-file-contract"></i><span> Get Started</span></a>
           </div>
         </div>
         <div id="cards-wrapper" class="cards-wrapper row">
           <div class="item item-green col-lg-4 col-md-6 col-sm-12">
             <div class="item-inner">
               <div class="icon-holder">
-                <i class="icon fas fa-file-contract"></i>
+                <i class="icon fas fa-cloud-download-alt"></i>
               </div>
               <div class="hvr-float">
-                <h3 class="title">Read The Docs</h3>
+                <h3 class="title">Downlad The Package</h3>
                 <p class="intro">Modules, Methods, Parameters</p>
-                <a class="link" href="start.html"><span></span></a>
+                <a class="link" href="https://pypi.org/project/eduAlgo/#files" target="_blank"><span></span></a>
               </div>
             </div>
           </div>
@@ -117,6 +133,14 @@
     </section>
   </div>
   <footer class="footer text-center">
+    <div class="social-container">
+      <div class="github-btn mb-2">
+        <a class="github-button" href="https://github.com/Abhijit2505/eduAlgo" data-size="large"
+          aria-label="Star xriley/PrettyDocs-Theme on GitHub">Give Us Some ⭐</a>
+        <a class="github-button" href="https://github.com/Abhijit2505" data-size="large"
+          aria-label="Follow @xriley on GitHub">Follow The Developer</a>
+      </div>
+    </div>
     Copyright 2020 @<a href="https://github.com/Abhijit2505" target="_blank">Abhijit Tripathy</a>. Package Designed by <a href="https://github.com/Abhijit2505" target="_blank">Abhijit Tripathy</a> for python enthusiasts
     [Theme Designed by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a>]
   </footer>
@@ -124,6 +148,7 @@
   <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
   <script type="text/javascript" src="assets/js/snow.js"></script>
 </body>

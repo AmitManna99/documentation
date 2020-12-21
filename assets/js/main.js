@@ -41,24 +41,33 @@ $(document).ready(function () {
 
 
   // ==== Adding Copy Button
-  $('#copy-btn').click(function (e) {
+  var copyBtn = document.querySelectorAll('#copy-btn');
 
-    var text = $(this).parent().text().trim();
-    var copyVal = document.createElement('input');
-    copyVal.value = text
-    document.body.appendChild(copyVal);
-    copyVal.select();
-    document.execCommand('copy');
-    document.body.removeChild(copyVal);
+  copyBtn.forEach(function (btn, idx) {
 
-    var tooltip = document.getElementById("tooltip");
-    tooltip.innerHTML = "Copied Text";
-  });
+    btn.addEventListener("click", function () {
+      var text = $(this).parent().text().trim().replace('Copy to clipboard', '');
+      var copyVal = document.createElement('input');
+      copyVal.value = text;
+      document.body.appendChild(copyVal);
+      console.log(copyVal.value)
+      copyVal.select();
+      document.execCommand('copy');
+      document.body.removeChild(copyVal);
 
-  $('#copy-btn').mouseout(function (e) {
-    var tooltip = document.getElementById("tooltip");
-    tooltip.innerHTML = "Copy to clipboard";
-  });
+      var tooltips = document.querySelectorAll("#tooltip");
+      tooltips.forEach(function(tooltip) {
+        tooltip.innerHTML = "Copied Text";
+      })
+    })
+
+    btn.addEventListener("mouseout", function() {
+      var tooltips = document.querySelectorAll("#tooltip");
+      tooltips.forEach(function(tooltip) {
+        tooltip.innerHTML = "Copy to clipboard";
+      })
+    })
+  })
 
 });
 
