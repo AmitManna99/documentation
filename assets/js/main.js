@@ -19,11 +19,6 @@ $(document).ready(function () {
 
   });
 
-  $('#navbarCollapse').on('click', function () {
-    $('#navbar').toggleClass('active');
-  });
-
-
   /* Bootstrap lightbox */
   /* Ref: http://ashleydw.github.io/lightbox/ */
 
@@ -32,40 +27,45 @@ $(document).ready(function () {
     $(this).ekkoLightbox();
   });
 
-  /*$.getJSON('../../navbar.html', function (data) {
+  // ===== Adding Copy Button =====
+  var code_area = document.querySelectorAll('pre');
+  var copyHtml = `<div class="tooltip" id="copy-btn"><a class="copy-btn"><span class="tooltiptext" id="tooltip">Copy to clipboard</span><i class="icon far fa-copy"></i></a></div>`;
+  var i = 1;
+  code_area.forEach(function (code) {
+    console.log(code);
+    if (i % 2) {
+      code.innerHTML = code.innerHTML + copyHtml;
+    }
+    i++;
+  })
 
-    console.log(data);
-    document.getElementById('navbar').innerHTML(data);
-      
-  });*/
+  // ===== Copy Button Execution =====
+  var copyBtn = document.querySelectorAll('#copy-btn');
 
+  copyBtn.forEach(function (btn, idx) {
 
-  // ==== Adding Copy Button
-  $('#copy-btn').click(function (e) {
+    btn.addEventListener("click", function () {
+      var text = $(this).parent().text().replace('Copy to clipboard', '');
+      var copyVal = document.createElement('input');
+      copyVal.value = text;
+      document.body.appendChild(copyVal);
+      //console.log(copyVal.value)
+      copyVal.select();
+      document.execCommand('copy');
+      document.body.removeChild(copyVal);
 
-    var text = $(this).parent().text().trim();
-    var copyVal = document.createElement('input');
-    copyVal.value = text
-    document.body.appendChild(copyVal);
-    copyVal.select();
-    document.execCommand('copy');
-    document.body.removeChild(copyVal);
+      var tooltips = document.querySelectorAll("#tooltip");
+      tooltips.forEach(function (tooltip) {
+        tooltip.innerHTML = "Copied Text";
+      })
+    })
 
-    var tooltip = document.getElementById("tooltip");
-    tooltip.innerHTML = "Copied Text";
-  });
-
-  $('#copy-btn').mouseout(function (e) {
-    var tooltip = document.getElementById("tooltip");
-    tooltip.innerHTML = "Copy to clipboard";
-  });
+    btn.addEventListener("mouseout", function () {
+      var tooltips = document.querySelectorAll("#tooltip");
+      tooltips.forEach(function (tooltip) {
+        tooltip.innerHTML = "Copy to clipboard";
+      })
+    })
+  })
 
 });
-
-fetch('/documentation/pages/navbar.html')
-  .then(response => response.text())
-  .then(text => {
-    let nabvar = document.getElementById('navbar');
-
-    nabvar.innerHTML = text;
-  })
