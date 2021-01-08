@@ -1235,6 +1235,10 @@ select {
   margin-bottom: 45px;
 }
 
+.promo-block .promo-title a:hover {
+  color: #04d9ff;
+}
+
 .promo-block .promo-title .svg-inline--fa {
   color: #1b6ca8;
 }
@@ -1313,6 +1317,10 @@ select {
   background: rgba(0, 0, 0, 0.5);
   border: none;
   color: #fff !important;
+}
+
+.desc ul li a:hover {
+  color: #04d9ff;
 }
 
 /* Extra small devices (phones, less than 768px) */
